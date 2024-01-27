@@ -1,1 +1,15 @@
-Hello World
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/monday-sdk-js/dist/main.js"></script>
+    </head>
+    <body>
+
+    </body>
+    <script>
+        const monday = window.mondaySdk();
+        monday.api(`query { users { id, name } }`).then(res => {
+            console.log(res);
+            /* { data: { users: [{id: 12312, name: "Bart Simpson"}, {id: 423423, name: "Homer Simpson"}] } } */
+        });
+    </script>
+</html>
